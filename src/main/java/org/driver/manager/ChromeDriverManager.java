@@ -22,12 +22,6 @@ public class ChromeDriverManager extends DriverManager{
     }
 
     @Override
-    void stopService() {
-        if (chromeDriverService != null && chromeDriverService.isRunning())
-            chromeDriverService.stop();
-    }
-
-    @Override
     void createService() {
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver(chromeDriverService, options);

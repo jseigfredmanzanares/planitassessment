@@ -7,7 +7,6 @@ public abstract class DriverManager {
     WebDriver driver;
 
     abstract void startService();
-    abstract void stopService();
     abstract void createService();
     abstract WebDriver getDriver();
 

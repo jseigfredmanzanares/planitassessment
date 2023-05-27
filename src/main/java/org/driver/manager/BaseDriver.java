@@ -24,6 +24,6 @@ public class BaseDriver {
     }
 
     public static void stop() {
-        driverManager.stopService();
+        driverManager.quitDriver();
     }
 }
