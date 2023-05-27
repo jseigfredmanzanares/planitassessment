@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Planit Assessment">
+    <test name="test cases">
+        <classes>
+            <class name="org.scripts.TestScripts"></class>
+        </classes>
+    </test>
+</suite>
