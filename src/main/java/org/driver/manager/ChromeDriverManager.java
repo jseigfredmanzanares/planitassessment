@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.events.EventFiringDecorator;
+import org.openqa.selenium.support.events.WebDriverListener;
+import org.util.WebListener;
 
 import java.io.File;
 
@@ -24,7 +27,9 @@ public class ChromeDriverManager extends DriverManager{
     @Override
     void createService() {
         ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(chromeDriverService, options);
+        WebDriver webDriver = new ChromeDriver(chromeDriverService, options);
+        WebDriverListener listener = new WebListener();
+        driver = new EventFiringDecorator<WebDriver>(listener).decorate(webDriver);
     }
 
     @Override
