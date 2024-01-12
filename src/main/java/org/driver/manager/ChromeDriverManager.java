@@ -30,6 +30,7 @@ public class ChromeDriverManager extends DriverManager{
         WebDriver webDriver = new ChromeDriver(chromeDriverService, options);
         WebDriverListener listener = new WebListener();
         driver = new EventFiringDecorator<WebDriver>(listener).decorate(webDriver);
+        //test comment
     }
 
     @Override
